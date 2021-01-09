@@ -45,24 +45,28 @@ void UConveyorBelt::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	Box->GetOverlappingActors(BoxOverlapActors);
 	for(int i = 0;i<BoxOverlapActors.Num();i++)
 	{
+		//使Actor在传送带上移动,并且朝向与传送带一致
 		//BoxOverlapActors[i]->DisableComponentsSimulatePhysics();
 		BoxOverlapActors[i]->SetActorLocation((BoxOverlapActors[i]->GetActorLocation()+GetOwner()->GetActorRotation().Vector()*Speed));
+		//UE_LOG(LogTemp,Error,TEXT("%f,%f,%f"),BoxOverlapActors[i]->GetActorRotation().Pitch,BoxOverlapActors[i]->GetActorRotation().Yaw,BoxOverlapActors[i]->GetActorRotation().Roll);
+		FRotator ActorRotatorOnBelt(GetOwner()->GetActorRotation().Pitch,BoxOverlapActors[i]->GetActorRotation().Yaw,BoxOverlapActors[i]->GetActorRotation().Roll);
+		//UE_LOG(LogTemp,Warning,TEXT("%f,%f,%f"),ActorRotatorOnBelt.Pitch,ActorRotatorOnBelt.Yaw,ActorRotatorOnBelt.Roll);
+		BoxOverlapActors[i]->SetActorRotation(ActorRotatorOnBelt);
 	}
-	// ...
 }
-//
+///Actor进入box范围时触发,停用其物理效果
 void  UConveyorBelt::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult )
 {
 	UE_LOG(LogTemp,Warning,TEXT("BeginOverlap:OtherActor: %s"),*OtherActor->GetName());
 	OtherActor->DisableComponentsSimulatePhysics();
 }
-
+///Actor离开box范围时触发,启用其物理效果
 void  UConveyorBelt::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	UE_LOG(LogTemp,Warning,TEXT("EndOverlap:OtherActor: %s"),*OtherActor->GetName());
 	EnableComponentsSimulatePhysics(OtherActor);
 }
-
+//启用Actor模拟物理
 void UConveyorBelt::EnableComponentsSimulatePhysics(AActor* Actor)
 {
 	for (UActorComponent* Component : Actor->GetComponents())

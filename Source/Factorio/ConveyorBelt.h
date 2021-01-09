@@ -29,7 +29,7 @@ class FACTORIO_API UConveyorBelt : public UActorComponent
 	AActor* OutPut();
 	UBoxComponent* Box;
 	UPROPERTY(BlueprintReadWrite)
-	float Speed = 0.8f;//传送带速度
+	float Speed = 1.5f;//传送带速度
 
 	private:
 	//变量声明区
