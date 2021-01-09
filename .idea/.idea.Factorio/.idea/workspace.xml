@@ -8,17 +8,15 @@
     <list default="true" id="d2d71946-64f9-4f37-9db8-bf0a2d987c3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Factorio.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Factorio.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/MyDefaultPawn_BP_Auto1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/MyDefaultPawn_BP_Auto1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto2.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto2.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto3.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto3.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MyDefaultPawn_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyDefaultPawn_BP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Factorio.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-09.14.16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-09.18.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-10.30.38.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-10.33.54.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Factorio/Grabber.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Grabber.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Factorio/Grabber.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Grabber.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,16 +27,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UE_4.25/Engine/Source/Runtime/Core/Public/Math/Rotator.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Factorio/Grabber.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" />
+      <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.h" />
       <option value="$PROJECT_DIR$/Source/Factorio/Grabber.h" />
       <option value="$PROJECT_DIR$/Source/Factorio/Grabber.cpp" />
-      <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.h" />
-      <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" />
+      <option value="$PROJECT_DIR$/Source/Factorio/Builder.cpp" />
+      <option value="$PROJECT_DIR$/Source/Factorio/Builder.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1moyL9X3SRH8OQUqNA2htxJihlX" />
@@ -377,6 +378,7 @@
       <updated>1610174182328</updated>
       <workItem from="1610174186704" duration="5142000" />
       <workItem from="1610189948103" duration="5069000" />
+      <workItem from="1610195781226" duration="8686000" />
     </task>
     <servers />
   </component>
@@ -395,6 +397,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

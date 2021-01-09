@@ -1,48 +1,37 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
+//判断视线与地面的交点,生成物品
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "PhysicsEngine/PhysicsHandleComponent.h"
 
-#include "Grabber.generated.h"
+#include "MachineBase.h"
+#include "Components/ActorComponent.h"
+#include "Builder.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class FACTORIO_API UGrabber : public UActorComponent
+class FACTORIO_API UBuilder : public UActorComponent
 {
 	GENERATED_BODY()
 
-	public:	
+public:	
 	// Sets default values for this component's properties
-	UGrabber();
-	
-
-	protected:
+	UBuilder();
+	float BuildDistance = 400.f;
+protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	public:	
+public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	//生成的蓝图Actor的父级C++类
+	UPROPERTY(EditDefaultsOnly, Category = Custom)
+	TSubclassOf<AMachineBase> BlueprintVar;
 	
-	private:
-	
-	float Reach = 200.f;
-	UPhysicsHandleComponent* PhysicsHandle = nullptr;
-	UInputComponent* InputComponent = nullptr;
-	
-	void Grab();
-	void Release();
-	void FindPhysicsComponent();
-	void SetupInputCoponent();
+private:
 	const FHitResult GetFirstPhysicsBodyInReach();
-	void AdjustReach(int ReachChange);
 	void GetSurfacePosition();
-	void SpawnActor();
+	void SpawnActor(FHitResult Hit);
 	FVector GetEndLocation();
-	
-
-		
 };

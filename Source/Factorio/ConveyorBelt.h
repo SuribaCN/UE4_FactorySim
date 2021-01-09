@@ -1,5 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 //TODO 当碰撞箱接触自身碰撞体积时移动自身
+//TODO 定制channel使其具有物理碰撞,防止离开传送带一段后下落
 #pragma once
 
 #include "CoreMinimal.h"

@@ -23,6 +23,8 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="Factorio" t="Include">
+          <e p="Builder.cpp" t="Include" />
+          <e p="Builder.h" t="Include" />
           <e p="ConveyorBelt.cpp" t="Include" />
           <e p="ConveyorBelt.h" t="Include" />
           <e p="DoorRotation.cpp" t="Include" />
@@ -34,6 +36,8 @@
           <e p="FactorioGameModeBase.h" t="Include" />
           <e p="Grabber.cpp" t="Include" />
           <e p="Grabber.h" t="Include" />
+          <e p="MachineBase.cpp" t="Include" />
+          <e p="MachineBase.h" t="Include" />
           <e p="MyDefaultPawn.cpp" t="Include" />
           <e p="MyDefaultPawn.h" t="Include" />
         </e>

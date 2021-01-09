@@ -45,7 +45,6 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 			PhysicsHandle->SetTargetLocation(LineTracedEnd);
 		}
 	}
-	GetSurfacePosition();
 	
 }
 //私有函数定义区
@@ -65,7 +64,7 @@ void UGrabber::SetupInputCoponent()
 		InputComponent->BindAction<ReachAdjustDelegate>("WheelUp", IE_Pressed, this,&UGrabber::AdjustReach,20);
 		InputComponent->BindAction<ReachAdjustDelegate>("WheelDown",IE_Pressed,this,&UGrabber::AdjustReach,-20);
 		//绑定生成Actor的键位
-		InputComponent->BindAction("Build",IE_Pressed,this,&UGrabber::SpawnActor);
+		//InputComponent->BindAction("Build",IE_Pressed,this,&UGrabber::SpawnActor);
 	}
 	else
 	{
@@ -161,19 +160,4 @@ void UGrabber::AdjustReach(int ReachChange)
 	Reach +=ReachChange;
 	if(Reach+ReachChange<300&&ReachChange>0)
 	Reach +=ReachChange;
-}
-///TODO 获取长度为BuildDistance的方向向量与待建筑平面的交点
-void UGrabber::GetSurfacePosition()
-{
-	DrawDebugLine(GetWorld(),GetOwner()->GetActorLocation(),GetEndLocation(),FColor(255,255,0));
-}
-///TODO 在指定位置生成Actor
-void UGrabber::SpawnActor()
-{
-	
-}
-///定义朝向向量
-FVector UGrabber::GetEndLocation()
-{
-	return GetOwner()->GetActorLocation()+GetOwner()->GetActorRotation().Vector()*BuildDistance;
 }
