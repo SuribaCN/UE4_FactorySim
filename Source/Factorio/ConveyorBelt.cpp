@@ -57,13 +57,13 @@ void UConveyorBelt::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 ///Actor进入box范围时触发,停用其物理效果
 void  UConveyorBelt::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult )
 {
-	UE_LOG(LogTemp,Warning,TEXT("BeginOverlap:OtherActor: %s"),*OtherActor->GetName());
+	//UE_LOG(LogTemp,Display,TEXT("BeginOverlap:OtherActor: %s"),*OtherActor->GetName());
 	OtherActor->DisableComponentsSimulatePhysics();
 }
 ///Actor离开box范围时触发,启用其物理效果
 void  UConveyorBelt::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	UE_LOG(LogTemp,Warning,TEXT("EndOverlap:OtherActor: %s"),*OtherActor->GetName());
+	//UE_LOG(LogTemp,Display,TEXT("EndOverlap:OtherActor: %s"),*OtherActor->GetName());
 	EnableComponentsSimulatePhysics(OtherActor);
 }
 //启用Actor模拟物理

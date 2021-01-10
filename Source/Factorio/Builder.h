@@ -30,8 +30,9 @@ public:
 	TSubclassOf<AMachineBase> BlueprintVar;
 	
 private:
-	const FHitResult GetFirstPhysicsBodyInReach();
+	bool GetFirstPhysicsBodyInReach(FHitResult& Hit);
 	void GetSurfacePosition();
-	void SpawnActor(FHitResult Hit);
+	void SpawnActor(FVector Location,FRotator Rotation);
+	void BindInputComponent();
 	FVector GetEndLocation();
 };

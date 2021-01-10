@@ -28,11 +28,8 @@ void UBuilder::BeginPlay()
 {
 	Super::BeginPlay();
 	UWorld* const World = GetWorld(); // get a reference to the world  
-	if (World)   
-	{  
-		// if world exists  
-		AMachineBase* YC = World->SpawnActor<AMachineBase>(BlueprintVar, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());  
-	}  
+	//AMachineBase* YC = World->SpawnActor<AMachineBase>(BlueprintVar, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());  
+	BindInputComponent();
 	
 }
 
@@ -41,12 +38,25 @@ void UBuilder::BeginPlay()
 void UBuilder::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
 	// ...
 }
+//绑定输入
+void UBuilder::BindInputComponent()
+{
+	UInputComponent* InputComponent = GetOwner()->InputComponent;
+	if(InputComponent)
+	{
+		InputComponent->BindAction("Build",IE_Pressed,this,&UBuilder::GetSurfacePosition);
+	}
+	else
+	{
+		UE_LOG(LogTemp,Error,TEXT("'%s'Dont Have An Input Component!"),*GetOwner()->GetName())
+	}
+}
 
-//获取与地面的交线
-const FHitResult UBuilder::GetFirstPhysicsBodyInReach()
+
+//获取与地面的交点
+bool UBuilder::GetFirstPhysicsBodyInReach(FHitResult& Hit)
 {
 	FVector PlayerViewPointLocation;
 	FRotator PlayerViewPointRotation;
@@ -59,34 +69,38 @@ const FHitResult UBuilder::GetFirstPhysicsBodyInReach()
 
 	///setuo query parameters
 	FCollisionQueryParams TraceParameters(FName(TEXT("")),false,GetOwner());
-
+	bool TraceHitATarget;
 	//射线追踪(AKA ray-cast)
-	FHitResult Hit;
-	GetWorld()->LineTraceSingleByObjectType(
+	TraceHitATarget =GetWorld()->LineTraceSingleByObjectType(
         OUT Hit,
         PlayerViewPointLocation,
         lineTracedEnd,
-        FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
+        FCollisionObjectQueryParams(ECollisionChannel::ECC_WorldStatic),
         TraceParameters
     );
-	AActor* ActorHit = Hit.GetActor();
-	if(ActorHit)
-	{
-		UE_LOG(LogTemp,Warning,TEXT("trace target:%s"),*ActorHit->GetName());
-	}
-
-	return Hit;
+	//FVector  ActorHit = Hit.ImpactPoint;
+	//UE_LOG(LogTemp,Error,TEXT("trace target:%f,%f,%f"),ActorHit.X,ActorHit.Y,ActorHit.Z);
+	return TraceHitATarget;
 }
 
 ///TODO 获取长度为BuildDistance的方向向量与待建筑平面的交点
 void UBuilder::GetSurfacePosition()
 {
-	//DrawDebugLine(GetWorld(),GetOwner()->GetActorLocation(),GetEndLocation(),FColor(255,255,0));
+	FHitResult Hit;
+	if(GetFirstPhysicsBodyInReach(Hit))
+	{
+		FVector  ActorHit = Hit.ImpactPoint;
+		UE_LOG(LogTemp,Warning,TEXT("trace target:%f,%f,%f"),ActorHit.X,ActorHit.Y,ActorHit.Z);
+		//DrawDebugLine(GetWorld(),GetOwner()->GetActorLocation(),GetEndLocation(),FColor(255,255,0));
+		SpawnActor(ActorHit,FRotator(0,0,0));
+	}
+	
 }
 ///TODO 在指定位置生成Actor
-void UBuilder::SpawnActor(FHitResult Hit)
+void UBuilder::SpawnActor(FVector Location,FRotator Rotation)
 {
-	Hit.Location;
+	UWorld* const World = GetWorld(); // get a reference to the world  
+	AMachineBase* YC = World->SpawnActor<AMachineBase>(BlueprintVar, Location, Rotation);  
 	
 }
 ///定义朝向向量
