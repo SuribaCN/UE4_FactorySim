@@ -5,12 +5,7 @@
     <projectFile>Intermediate/ProjectFiles/UE4.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d71946-64f9-4f37-9db8-bf0a2d987c3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/Builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/Grabber.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Grabber.h" afterDir="false" />
-    </list>
+    <list default="true" id="d2d71946-64f9-4f37-9db8-bf0a2d987c3e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,10 +25,10 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.h" />
-      <option value="$PROJECT_DIR$/Source/Factorio/Grabber.cpp" />
       <option value="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" />
       <option value="$PROJECT_DIR$/Source/Factorio/Builder.cpp" />
       <option value="$PROJECT_DIR$/Source/Factorio/Builder.h" />
+      <option value="$PROJECT_DIR$/Source/Factorio/Grabber.cpp" />
       <option value="$PROJECT_DIR$/Source/Factorio/Grabber.h" />
     </changedPaths>
   </component>

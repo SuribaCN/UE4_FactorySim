@@ -1,5 +1,8 @@
 Binaries/
-Content/StarterContent/
+Content/StarterContent/Meshs/
+Content/StarterContent/Materias/
+Content/StarterContent/Textures/
+Content/StarterContent/StarterContent/
 Content/MSPresets/
 Content/Megascans/
 Content/ParagonShinbi/
@@ -9,3 +12,4 @@ Content/BuildingSystem/
 .vs/Factorio/v16/
 Intermediate/
 Saved/
+Content/StarterContent/
