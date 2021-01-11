@@ -17,7 +17,7 @@ class FACTORIO_API UBuilder : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UBuilder();
-	float BuildDistance = 400.f;
+	float BuildDistance = 4000.f;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

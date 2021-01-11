@@ -17,7 +17,8 @@ class FACTORIO_API UGrabber : public UActorComponent
 	public:	
 	// Sets default values for this component's properties
 	UGrabber();
-	
+	UPROPERTY(BlueprintReadWrite)
+	float Reach = 400.f;
 
 	protected:
 	// Called when the game starts
@@ -29,7 +30,8 @@ class FACTORIO_API UGrabber : public UActorComponent
 	
 	private:
 	
-	float Reach = 200.f;
+	float ReachMax = 4000.f;
+	float ReachMin = 50.f;
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 	

@@ -156,8 +156,8 @@ const FHitResult UGrabber::GetFirstPhysicsBodyInReach()
 ///调节手中物品距离
 void UGrabber::AdjustReach(int ReachChange)
 {
-	if(Reach+ReachChange>70&&ReachChange<0)
+	if(Reach+ReachChange>ReachMin&&ReachChange<0)
 	Reach +=ReachChange;
-	if(Reach+ReachChange<300&&ReachChange>0)
+	if(Reach+ReachChange<ReachMax&&ReachChange>0)
 	Reach +=ReachChange;
 }
