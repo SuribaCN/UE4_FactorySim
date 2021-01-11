@@ -7,10 +7,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d71946-64f9-4f37-9db8-bf0a2d987c3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-10.37.18.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/Builder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Builder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/Builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/Builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Factorio/ConveyorBelt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GameModeBase_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameModeBase_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MyDefaultPawn_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyDefaultPawn_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/MyDefaultPawn_BP_Auto2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/MyDefaultPawn_BP_Auto2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-7FB612BB4855A5071F62F18073D89798/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-A586E8B344A80D90A352A68BA17494F9/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-A62E8E2243D72838DB4AE09A48CFAF92/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-ACD0FA634775E104E9F6EF89A6CF50A3/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-BBE825A94A06C6F40130B7B664A54A64/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-CA2652464A19C3C52252039F88D6F128/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-E43F41214886A8CD106F13993EAE49BF/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-FF3BB8F242121A785EF301804EEBF09B/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-10.40.08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Factorio-backup-2021.01.09-10.43.19.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,6 +387,7 @@
       <workItem from="1610189948103" duration="5069000" />
       <workItem from="1610195781226" duration="8686000" />
       <workItem from="1610258708582" duration="9260000" />
+      <workItem from="1610280901421" duration="1750000" />
     </task>
     <servers />
   </component>
